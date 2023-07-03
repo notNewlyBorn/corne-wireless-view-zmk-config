@@ -16,7 +16,9 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
     };
 
@@ -25,40 +27,51 @@
             label = "macro_a_and";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(A)>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(A)>;
         };
         mac_swed_o: mac_swed_o {
             label = "macro_a_and";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp O>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp O>;
         };
         mac_swed_aa: mac_swed_aa {
             label = "macro_a_and";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp O>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp O>;
         };
         mac_swed_capa: mac_swed_capa {
             label = "macro_a_and";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LS(RA(A))>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(RA(A))>;
         };
         mac_swed_capo: mac_swed_capo {
             label = "macro_a_and";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp LS(O)>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp LS(O)>;
         };
         mac_swed_capaa: mac_swed_capao {
             label = "macro_a_and";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp LS(A)>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp LS(A)>;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -71,9 +84,9 @@
             //                    | ALT | LCMD | L2 |   | SPC/SHIFT | L1  | L3 |
 
             bindings = <
-  &kp TAB  &kp Q  &kp W          &kp E             &kp R  &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P   &kp BSPC
-  &kp ESC  &kp A  &kp S          &kp D             &kp F  &kp G        &kp H  &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
-&kp LCTRL  &kp Z  &kp X          &kp C             &kp V  &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
+  &kp TAB  &kp Q  &kp W          &kp E             &kp R  &kp T              &kp Y  &kp U      &kp I    &kp O     &kp P   &kp BSPC
+  &kp ESC  &kp A  &kp S          &kp D             &kp F  &kp G              &kp H  &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
+&kp LCTRL  &kp Z  &kp X          &kp C             &kp V  &kp B              &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
                          &kp RIGHT_ALT  &kp LEFT_COMMAND  &mo 2    &hm RSHFT SPACE  &mo 1      &mo 3
             >;
         };
@@ -86,10 +99,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL     &kp AT      &kp HASH        &kp DLLR  &kp PRCNT &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-&trans     &mac_swed_a   &mac_swed_a  &mac_swed_a      &trans    &trans    &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT &kp ENTER  &trans
-&kp LSHFT  &mac_swed_capa &mac_swed_capo &mac_swed_capaa  &trans  &trans      &trans    &trans    &trans        &trans     &trans     &trans
-                                                    &trans  &trans  &trans      &trans    &trans  &kp RALT
+  &kp TAB        &kp EXCL          &kp AT         &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp KP_MULTIPLY   &kp LPAR   &kp RPAR     &kp BSPC
+   &trans     &mac_swed_a     &mac_swed_a      &mac_swed_a    &trans     &trans     &kp LEFT  &kp DOWN           &kp UP  &kp RIGHT  &kp ENTER       &trans
+&kp LSHFT  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa    &trans     &trans       &trans    &trans           &trans     &trans     &trans  &bootloader
+                                                    &trans    &trans     &trans       &trans    &trans         &kp RALT
             >;
         };
 
