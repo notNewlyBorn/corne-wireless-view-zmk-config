@@ -71,10 +71,10 @@
             //                    | ALT | LCMD | LCTRL |   | SPC/SHIFT | L1  | L3 |
 
             bindings = <
-  &kp TAB  &kp '  &kp ,     &kp .      &kp P  &kp Y           &kp F   &kp G   &kp C    &kp R    &kp L    &hm LA(BSPC) BSPC
-  &kp ESC  &kp A  &kp O     &kp E      &kp U  &kp I           &kp D   &kp D   &kp T    &kp N    &kp S    &kp -
-&kp LSHFT  &kp ;  &kp Q     &kp J      &kp K  &kp X           &kp B   &kp M   &kp W    &kp V   &kp  Z    &kp /
-                &kp RIGHT_ALT  &kp LCMD   LCTRL     &hm RSHFT SPACE   &mo 1   &mo 3
+  &kp TAB  &kp APOS  &kp COMMA  &kp DOT      &kp P  &kp Y           &kp F   &kp G   &kp C    &kp R    &kp L    &hm LA(BSPC) BSPC
+  &kp ESC  &kp A     &kp O      &kp E      &kp U  &kp I           &kp D   &kp D   &kp T    &kp N    &kp S    &kp MINUS
+&kp LSHFT  &kp SEMI  &kp Q      &kp J      &kp K  &kp X           &kp B   &kp M   &kp W    &kp V   &kp  Z    &kp FSLH
+                &kp RIGHT_ALT  &kp LCMD   LCTRL                   &hm RSHFT SPACE   &mo 1   &mo 3
             >;
         };
 
