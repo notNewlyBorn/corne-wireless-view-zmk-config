@@ -66,29 +66,29 @@
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | CTRL  |
+            // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | CTRL  |
             //                    | ALT | LCMD | L2 |   | SPC/SHIFT | L1  | L3 |
 
             bindings = <
   &kp TAB  &kp Q  &kp W          &kp E             &kp R  &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P   &kp BSPC
   &kp ESC  &kp A  &kp S          &kp D             &kp F  &kp G        &kp H  &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
-&kp LSHFT  &kp Z  &kp X          &kp C             &kp V  &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
+&kp LCTRL  &kp Z  &kp X          &kp C             &kp V  &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
                          &kp RIGHT_ALT  &kp LEFT_COMMAND  &mo 2    &hm RSHFT SPACE  &mo 1      &mo 3
             >;
         };
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | RA(BKSP) |
             // | ESC  |  å  |  ö  |  ä  |     |     |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |  Å  |  Ö  |  Ä  |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
 &kp TAB    &kp EXCL     &kp AT      &kp HASH        &kp DLLR  &kp PRCNT &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-&trans     mac_swed_a   mac_swed_a  mac_swed_a      &trans    &trans    &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT &kp ENTER  &trans
-&kp LSHFT  mac_swed_capa mac_swed_capo mac_swed_capaa  &trans  &trans      &trans    &trans    &trans        &trans     &trans     &trans
+&trans     &mac_swed_a   &mac_swed_a  &mac_swed_a      &trans    &trans    &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT &kp ENTER  &trans
+&kp LSHFT  &mac_swed_capa &mac_swed_capo &mac_swed_capaa  &trans  &trans      &trans    &trans    &trans        &trans     &trans     &trans
                                                     &trans  &trans  &trans      &trans    &trans  &kp RALT
             >;
         };
