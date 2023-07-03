@@ -57,7 +57,7 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp RA(U) &kp LS(A)>;
         };
-    }
+    };
 
 
     keymap {
