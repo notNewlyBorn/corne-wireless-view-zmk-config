@@ -16,57 +16,118 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
+        };
+    };
+
+    macros {
+        mac_swed_a: mac_swed_a {
+            label = "macro_a_and";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(A)>;
+        };
+        mac_swed_o: mac_swed_o {
+            label = "macro_a_and";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp O>;
+        };
+        mac_swed_aa: mac_swed_aa {
+            label = "macro_a_and";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp O>;
+        };
+        mac_swed_capa: mac_swed_capa {
+            label = "macro_a_and";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(RA(A))>;
+        };
+        mac_swed_capo: mac_swed_capo {
+            label = "macro_a_and";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp LS(O)>;
+        };
+        mac_swed_capaa: mac_swed_capao {
+            label = "macro_a_and";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp RA(U) &kp LS(A)>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        dvorak_layer {
+        default_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  | BKSP |
-            // | ESC  |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  -   |
-            // | SHFT |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  |  /  |
-            //                    | ALT | LCMD | LCTRL |   | SPC/SHIFT | L1  | L3 |
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | CTRL  |
+            //                    | ALT | LCMD | L2 |   | SPC/SHIFT | L1  | L3 |
 
             bindings = <
   &kp TAB  &kp Q  &kp W          &kp E             &kp R  &kp T              &kp Y  &kp U      &kp I    &kp O     &kp P  &hm BACKSPACE LA(BACKSPACE)
   &kp ESC  &kp A  &kp S          &kp D             &kp F  &kp G              &kp H  &kp J      &kp K    &kp L  &kp SEMI                      &kp SQT
-&kp LSHFT  &kp Z  &kp X          &kp C             &kp V  &kp B              &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH                    &kp LCTRL
+&kp LCTRL  &kp Z  &kp X          &kp C             &kp V  &kp B              &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH                    &kp LCTRL
                          &kp RIGHT_ALT  &kp LEFT_COMMAND  &mo 2    &hm RSHFT SPACE  &mo 1      &mo 3
             >;
         };
 
-        arrow_layer {
+        lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | LCMD(BKSP) |
-            // | ESC  |  å  |  ö  |  ä  |     |     |   | LFT | DWN |  UP | RGT |     |  ENTER   |
-            // | SHFT |  Å  |  Ö  |  Ä  |     |     |   |  {  |  }  |  [  |  ]  |  ?  |  trans  |
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | RA(BKSP) |
+            // | ESC  |  å  |  ö  |  ä  |     |     |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |  Å  |  Ö  |  Ä  |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL     &kp AT      &kp HASH        &kp DLLR  &kp PRCNT &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR    &kp LCMD(BSPC)
-&trans     &trans   &trans &trans      &trans    &trans    &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT  &trans     &kp ENTER
-&kp LSHFT  &trans &trans &trans  &trans  &trans      &trans    &trans    &trans        &trans    &trans    &trans
-                                                    &trans  &trans  &trans      &trans    &trans  &kp RALT
+  &kp TAB        &kp EXCL          &kp AT         &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp KP_MULTIPLY   &kp LPAR   &kp RPAR     &kp BSPC
+   &trans     &mac_swed_a     &mac_swed_a      &mac_swed_a    &trans     &trans     &kp LEFT  &kp DOWN           &kp UP  &kp RIGHT  &kp ENTER       &trans
+&kp LSHFT  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa    &trans     &trans       &trans    &trans           &trans     &trans     &trans  &bootloader
+                                                    &trans    &trans     &trans       &trans    &trans         &kp RALT
             >;
         };
 
-        number_layer {
+        raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  6  |  7  |  8  |  9 |  0  | BKSP |
-            // |  ESC |  å  |  ö  |  ä  |     |     |   |  1 |  2  |  3  |  4  |  5  |  `   |
-            // | SHFT |  Å  |  Ö  |  Ä  |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp TAB    &kp EXCL       &kp AT         &kp HASH      &kp DLLR  &trans        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-  &trans     &trans         &trans         &trans        &trans    &trans        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans
-  &kp LSHFT  &trans         &trans         &trans        &trans    &trans        &kp UNDER   &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                                            &trans       &trans    &trans        &trans   &trans   &kp RALT
+  &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
+   &trans    &trans  &trans    &trans    &trans     &trans    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp FSLH  &kp GRAVE
+&kp LSHFT    &trans  &trans    &trans    &trans     &trans    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                               &trans    &trans     &trans       &trans     &trans         &kp RALT
             >;
         };
 
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans           &trans           &trans           &trans           &trans  &trans
+                        &trans  &trans  &trans             &trans           &trans           &trans
+            >;
+        };
     };
 };
