@@ -20,7 +20,7 @@
         };
     };
 
-    macros {
+ /*   macros {
         mac_swed_a: mac_swed_a {
             label = "mac_swed_a";
             compatible = "zmk,behavior-macro";
@@ -57,7 +57,7 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp RA(U) &kp LS(A)>;
         };
-    };
+    }; */
 
 
     keymap {
