@@ -24,10 +24,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LEFT";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
-            bindings =
-                <&kp LEFT_ARROW>,
-                <&kp LA(LEFT_ARROW)>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LA(LEFT_ARROW)>;
         };
         td_right: td_right {
             compatible = "zmk,behavior-tap-dance";
@@ -37,7 +35,7 @@
                 <&kp RIGHT_ARROW>,
                 <&kp LA(RIGHT_ARROW)>;
 
-            tapping-term-ms = <170>;
+            tapping-term-ms = <200>;
         };
     };
 
