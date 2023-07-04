@@ -20,46 +20,6 @@
         };
     };
 
- /*   macros {
-        mac_swed_a: mac_swed_a {
-            label = "mac_swed_a";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(A)>;
-        };
-        mac_swed_o: mac_swed_o {
-            label = "mac_swed_o";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp O>;
-        };
-        mac_swed_aa: mac_swed_aa {
-            label = "mac_swed_aa";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp O>;
-        };
-        mac_swed_capa: mac_swed_capa {
-            label = "mac_swed_capa";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LS(RA(A))>;
-        };
-        mac_swed_capo: mac_swed_capo {
-            label = "mac_swed_capo";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp LS(O)>;
-        };
-        mac_swed_capaa: mac_swed_capaa {
-            label = "mac_swed_capaa";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp RA(U) &kp LS(A)>;
-        };
-    }; */
-
-
     keymap {
         compatible = "zmk,keymap";
 
