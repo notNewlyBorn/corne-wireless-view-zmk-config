@@ -116,19 +116,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp EXCL          &kp AT         &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR   &kp RPAR  &kp LG(BSPC)
- &trans     &mac_swed_a     &mac_swed_o     &mac_swed_aa  &kp EQUAL  &kp GRAVE     &td_left  &kp DOWN    &kp UP  &td_right  &kp SLASH     &kp ENTER
- &trans  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa   &kp PLUS  &kp TILDE     &kp BSLH  &kp LBRC  &kp RBRC   &kp LBKT   &kp RBKT  &kp QUESTION
-                                                  &trans     &trans     &trans       &trans    &trans  &kp RALT
+&kp TAB        &kp EXCL          &kp AT         &kp HASH   &kp DLLR  &kp PRCNT            &kp CARET  &kp AMPS  &kp STAR             &kp LPAR      &kp RPAR  &kp LG(BSPC)
+ &trans     &mac_swed_a     &mac_swed_o     &mac_swed_aa  &kp EQUAL  &kp GRAVE    &hm LA(LEFT) LEFT  &kp DOWN    &kp UP  &hm LA(RIGHT) RIGHT  &kp QUESTION     &kp ENTER
+ &trans  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa   &kp PLUS  &kp TILDE             &kp BSLH  &kp LBRC  &kp RBRC             &kp LBKT      &kp RBKT  &kp QUESTION
+                                                  &trans     &trans     &trans               &trans    &trans  &kp RALT
             >;
         };
 
         layer_3 {
             bindings = <
-     &trans          &trans          &trans           &trans  &trans  &trans       &kp NUMBER_6     &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9     &kp NUMBER_0       &trans
-     &trans     &mac_swed_a     &mac_swed_o     &mac_swed_aa  &trans  &trans    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp ENTER
-&bootloader  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa  &trans  &trans           &kp PIPE           &trans           &trans           &trans           &trans  &bootloader
-                                                      &trans  &trans  &trans             &trans           &trans           &trans
+     &trans          &trans          &trans           &trans     &trans     &trans       &kp NUMBER_6     &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9     &kp NUMBER_0       &trans
+     &trans     &mac_swed_a     &mac_swed_o     &mac_swed_aa  &kp EQUAL  &kp GRAVE    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp ENTER
+&bootloader  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa   &kp PLUS  &kp TILDE           &kp PIPE           &trans           &trans           &trans           &trans  &bootloader
+                                                      &trans     &trans     &trans             &trans           &trans           &trans
             >;
         };
     };
