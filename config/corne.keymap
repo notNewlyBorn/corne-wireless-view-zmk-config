@@ -101,10 +101,10 @@
             //                    | ALT | LCMD | L2 |   | SPC/SHIFT | L1  | L3 |
 
             bindings = <
-  &kp TAB   &kp SQT  &kp COMMA        &kp DOT             &kp P      &kp Y              &kp F  &kp G  &kp C  &kp R  &kp L  &hm LA(BACKSPACE) BACKSPACE
-  &kp ESC     &kp A      &kp O          &kp E             &kp U      &kp I              &kp D  &kp H  &kp T  &kp N  &kp S                    &kp MINUS
-&kp LCTRL  &kp SEMI      &kp Q          &kp J             &kp K      &kp X              &kp B  &kp M  &kp W  &kp V  &kp Z                     &kp FSLH
-                                &kp RIGHT_ALT  &kp LEFT_COMMAND  &sk LSHFT    &hm RSHFT SPACE  &sl 1  &sl 2
+         &kp TAB  &mt DOUBLE_QUOTES SQT  &kp COMMA          &kp DOT       &mt LG(P) P      &kp Y        &mt LG(F) F  &kp G  &mt LG(C) C  &mt LG(R) R        &kp L  &hm LA(BACKSPACE) BACKSPACE
+&mt LCTRL ESCAPE            &mt LG(A) A      &kp O            &kp E             &kp U      &kp I        &mt LG(D) D  &kp H        &kp T        &kp N  &mt LG(S) S              &mt MINUS ENTER
+       &kp LCTRL    &mt COLON SEMICOLON      &kp Q  &mt LG(LA(J)) J             &kp K      &kp X              &kp B  &kp M        &kp W  &mt LG(V) V  &mt LG(Z) Z                     &kp FSLH
+                                                      &kp RIGHT_ALT  &kp LEFT_COMMAND  &sk LSHFT    &hm RSHFT SPACE  &sl 1        &sl 2
             >;
         };
 
@@ -125,7 +125,7 @@
 
         layer_3 {
             bindings = <
-     &trans          &kp F1          &kp F2           &kp F3     &kp F4    &kp F12    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0       &trans
+     &trans          &kp F1          &kp F2           &kp F3    &kp F11    &kp F12    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0       &trans
      &trans     &mac_swed_a     &mac_swed_o     &mac_swed_aa  &kp EQUAL  &kp GRAVE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp ENTER
 &bootloader  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa   &kp PLUS  &kp TILDE        &kp PIPE        &trans        &trans        &trans        &trans  &bootloader
                                                       &trans     &trans     &trans          &trans        &trans        &trans
