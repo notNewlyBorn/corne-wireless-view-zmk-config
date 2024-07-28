@@ -16,10 +16,9 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         td_left: td_left {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LEFT";
@@ -27,13 +26,12 @@
             tapping-term-ms = <200>;
             bindings = <&kp LA(LEFT_ARROW)>;
         };
+
         td_right: td_right {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_RIGHT";
             #binding-cells = <0>;
-            bindings =
-                <&kp RIGHT_ARROW>,
-                <&kp LA(RIGHT_ARROW)>;
+            bindings = <&kp RIGHT_ARROW>, <&kp LA(RIGHT_ARROW)>;
 
             tapping-term-ms = <200>;
         };
@@ -44,49 +42,42 @@
             label = "mac_swed_a";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RA(A)>;
+            bindings = <&macro_tap>, <&kp RA(A)>;
         };
+
         mac_swed_o: mac_swed_o {
             label = "mac_swed_o";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RA(U) &kp O>;
+            bindings = <&macro_tap>, <&kp RA(U) &kp O>;
         };
+
         mac_swed_aa: mac_swed_aa {
             label = "mac_swed_aa";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RA(U) &kp A>;
+            bindings = <&macro_tap>, <&kp RA(U) &kp A>;
         };
+
         mac_swed_capa: mac_swed_capa {
             label = "mac_swed_capa";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LS(RA(A))>;
+            bindings = <&macro_tap>, <&kp LS(RA(A))>;
         };
+
         mac_swed_capo: mac_swed_capo {
             label = "mac_swed_capo";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RA(U) &kp LS(O)>;
+            bindings = <&macro_tap>, <&kp RA(U) &kp LS(O)>;
         };
+
         mac_swed_capaa: mac_swed_capaa {
             label = "mac_swed_capaa";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp RA(U) &kp LS(A)>;
+            bindings = <&macro_tap>, <&kp RA(U) &kp LS(A)>;
         };
     };
 
@@ -101,10 +92,10 @@
             //                    | ALT | LCMD | L2 |   | SPC/SHIFT | L1  | L3 |
 
             bindings = <
-         &kp TAB  &hm DOUBLE_QUOTES SINGLE_QUOTE  &kp COMMA        &kp DOT       &hm LG(P) P            &kp Y        &hm LG(F) F  &kp G  &hm LG(C) C  &hm LG(R) R        &kp L  &hm LA(BACKSPACE) BACKSPACE
-&mt LCTRL ESCAPE                           &kp A      &kp O          &kp E             &kp U  &hm LA(LG(J)) I              &kp D  &kp H        &kp T        &kp N  &hm LG(S) S                    &kp MINUS
-       &kp LCTRL                  &hm COLON SEMI      &kp Q          &kp J             &kp K            &kp X              &kp B  &kp M        &kp W  &hm LG(V) V  &hm LG(Z) Z                     &kp FSLH
-                                                             &kp RIGHT_ALT  &kp LEFT_COMMAND        &sk LSHFT    &hm RSHFT SPACE  &sl 1        &sl 2
+&kp TAB           &hm DOUBLE_QUOTES SINGLE_QUOTE  &hm LT COMMA  &hm GT DOT     &hm LG(P) P       &kp Y              &hm LG(F) F      &kp G        &hm LG(C) C      &hm LG(R) R  &kp L        &hm LA(BACKSPACE) BACKSPACE
+&mt LCTRL ESCAPE  &hm LEFT_CONTROL A              &kp O         &kp E          &kp U             &hm LA(LG(J)) I    &kp D            &hm RCTRL H  &hm RIGHT_ALT T  &kp N        &hm LG(S) S  &kp MINUS
+&kp LCTRL         &hm COLON SEMI                  &kp Q         &kp J          &kp K             &kp X              &kp B            &kp M        &kp W            &hm LG(V) V  &hm LG(Z) Z  &kp FSLH
+                                                                &kp RIGHT_ALT  &kp LEFT_COMMAND  &sk LSHFT          &hm RSHFT SPACE  &sl 1        &sl 2
             >;
         };
 
@@ -116,19 +107,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp EXCL          &kp AT         &kp HASH   &kp DLLR  &kp PRCNT            &kp CARET  &kp AMPS  &kp STAR             &kp LPAR      &kp RPAR  &kp LG(BSPC)
- &trans     &mac_swed_a     &mac_swed_o     &mac_swed_aa  &kp EQUAL  &kp GRAVE    &hm LA(LEFT) LEFT  &kp DOWN    &kp UP  &hm LA(RIGHT) RIGHT  &kp QUESTION     &kp ENTER
- &trans  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa   &kp PLUS  &kp TILDE             &kp BSLH  &kp LBRC  &kp RBRC             &kp LBKT      &kp RBKT  &kp QUESTION
-                                                  &trans     &trans     &trans               &trans    &trans  &kp RALT
+&kp TAB  &kp EXCL        &kp AT          &kp HASH         &kp DLLR   &kp PRCNT    &kp CARET          &kp AMPS  &kp STAR  &kp LPAR             &kp RPAR      &kp LG(BSPC)
+&trans   &mac_swed_a     &mac_swed_o     &mac_swed_aa     &kp EQUAL  &kp GRAVE    &hm LA(LEFT) LEFT  &kp DOWN  &kp UP    &hm LA(RIGHT) RIGHT  &kp QUESTION  &kp ENTER
+&trans   &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa  &kp PLUS   &kp TILDE    &kp BSLH           &kp LBRC  &kp RBRC  &kp LBKT             &kp RBKT      &kp QUESTION
+                                         &trans           &trans     &trans       &trans             &trans    &kp RALT
             >;
         };
 
         layer_3 {
             bindings = <
-     &trans          &kp F1          &kp F2           &kp F3    &kp F11    &kp F12    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0       &trans
-     &trans     &mac_swed_a     &mac_swed_o     &mac_swed_aa  &kp EQUAL  &kp GRAVE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp ENTER
-&bootloader  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa   &kp PLUS  &kp TILDE        &kp PIPE        &trans        &trans        &trans        &trans  &bootloader
-                                                      &trans     &trans     &trans          &trans        &trans        &trans
+&trans       &kp F1          &kp F2          &kp F3           &kp F11    &kp F12      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans       &mac_swed_a     &mac_swed_o     &mac_swed_aa     &kp EQUAL  &kp GRAVE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp ENTER
+&bootloader  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa  &kp PLUS   &kp TILDE    &kp PIPE      &trans        &trans        &trans        &trans        &bootloader
+                                             &trans           &trans     &trans       &trans        &trans        &trans
             >;
         };
     };
