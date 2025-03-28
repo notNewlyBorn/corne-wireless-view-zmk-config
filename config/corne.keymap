@@ -93,7 +93,7 @@
 
             bindings = <
 &kp TAB           &hm DOUBLE_QUOTES SINGLE_QUOTE  &hm LT COMMA  &hm GT DOT     &hm LG(P) P       &kp Y              &hm LG(F) F      &kp G        &hm LG(C) C      &hm LG(R) R  &kp L        &hm LA(BACKSPACE) BACKSPACE
-&mt LCTRL ESCAPE  &hm LEFT_CONTROL A              &kp O         &kp E          &kp U             &hm LA(LG(J)) I    &kp D            &hm RCTRL H  &hm RIGHT_ALT T  &kp N        &hm LG(S) S  &kp MINUS
+&mt LCTRL ESCAPE  &hm LEFT_CONTROL A              &kp O         &kp E          &kp U             &hm LA(LG(J)) I    &kp D            &hm RCTRL H  &hm RIGHT_ALT T  &kp N        &hm LGUI S   &kp MINUS
 &kp LCTRL         &hm COLON SEMI                  &kp Q         &kp J          &kp K             &kp X              &kp B            &kp M        &kp W            &hm LG(V) V  &hm LG(Z) Z  &kp FSLH
                                                                 &kp RIGHT_ALT  &kp LEFT_COMMAND  &sk LSHFT          &hm RSHFT SPACE  &sl 1        &sl 2
             >;
