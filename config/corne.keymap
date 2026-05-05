@@ -93,14 +93,14 @@
             //                    | ALT | LCMD | L2 |   | SPC/SHIFT | L1  | L3 |
 
             bindings = <
-&kp TAB                &hm DOUBLE_QUOTES SINGLE_QUOTE  &hm LT COMMA  &hm GT DOT     &hm LG(P) P       &kp Y                      &kp F              &kp G           &hm LG(C) C  &hm LG(R) R  &kp L        &hm LA(BACKSPACE) BACKSPACE
-&mt LEFT_SHIFT ESCAPE  &hm LEFT_CONTROL A              &kp O         &kp E          &kp U             &hm LA(LG(J)) I            &kp D                    &hm LEFT_GUI H  &kp T        &kp N        &kp S        &mt RIGHT_SHIFT MINUS
-&kp LCTRL              &hm COLON SEMI                  &kp Q         &kp J          &kp K             &kp X                      &kp B                    &kp M           &kp W        &kp V  &kp Z  &kp FSLH
+&kp TAB                &hm DOUBLE_QUOTES SINGLE_QUOTE  &hm LT COMMA  &hm GT DOT     &hm LG(P) P       &kp Y                      &kp F                    &kp G           &hm LG(C) C  &hm LG(R) R  &kp L  &hm LA(BACKSPACE) BACKSPACE
+&mt LEFT_SHIFT ESCAPE  &hm LEFT_CONTROL A              &kp O         &kp E          &kp U             &hm LA(LG(J)) I            &kp D                    &hm LEFT_GUI H  &kp T        &kp N        &kp S  &mt RIGHT_SHIFT MINUS
+&kp LCTRL              &hm COLON SEMI                  &kp Q         &kp J          &kp K             &kp X                      &kp B                    &kp M           &kp W        &kp V        &kp Z  &kp FSLH
                                                                      &kp RIGHT_ALT  &kp LEFT_COMMAND  &mt LA(LS(LCTRL)) SPACE    &mt LA(LS(LCTRL)) SPACE  &sl 1           &sl 2
             >;
         };
 
-        lower_layer {
+        Sym_Nav {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | RA(BKSP) |
             // | ESC  |  å  |  ö  |  ä  |     |     |   | LFT | DWN |  UP | RGT |     |      |
@@ -108,19 +108,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_SEL 0  &kp EXCL        &kp AT          &kp HASH         &kp DLLR   &kp PRCNT    &kp CARET          &kp AMPS  &kp STAR  &kp LPAR             &kp RPAR      &kp LG(BSPC)
-&trans   &mac_swed_a     &mac_swed_o     &mac_swed_aa     &kp EQUAL  &kp GRAVE    &hm LA(LEFT) LEFT  &kp DOWN  &kp UP    &hm LA(RIGHT) RIGHT  &kp QUESTION  &kp ENTER
-&trans   &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa  &kp PLUS   &kp TILDE    &kp BSLH           &kp LBRC  &kp RBRC  &kp LBKT             &kp RBKT      &kp QUESTION
-                                         &trans           &trans     &trans       &trans             &trans    &kp RALT
+&trans  &kp EXCL        &kp AT          &kp HASH         &kp DLLR   &kp PRCNT    &kp CARET          &kp AMPS  &kp STAR  &kp LPAR             &kp RPAR      &kp LG(BSPC)
+&trans  &mac_swed_a     &mac_swed_o     &mac_swed_aa     &kp EQUAL  &kp GRAVE    &hm LA(LEFT) LEFT  &kp DOWN  &kp UP    &hm LA(RIGHT) RIGHT  &kp QUESTION  &kp ENTER
+&trans  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa  &kp PLUS   &kp TILDE    &kp BSLH           &kp LBRC  &kp RBRC  &kp LBKT             &kp RBKT      &kp QUESTION
+                                        &trans           &trans     &trans       &trans             &trans    &sl 3
             >;
         };
 
-        layer_3 {
+        Num_Fun {
             bindings = <
-&bt BT_SEL 1      &kp F1          &kp F2          &kp F3           &kp F11    &kp F12      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&bt BT_CLR_ALL  &mac_swed_a     &mac_swed_o     &mac_swed_aa     &kp EQUAL  &kp GRAVE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp ENTER
-&bootloader     &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa  &kp PLUS   &kp TILDE    &kp PIPE      &trans        &trans        &trans        &trans        &bootloader
-                                                &trans           &trans     &trans       &trans        &trans        &trans
+&trans       &kp F1          &kp F2          &kp F3           &kp F11    &kp F12      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans       &mac_swed_a     &mac_swed_o     &mac_swed_aa     &kp EQUAL  &kp GRAVE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp ENTER
+&bootloader  &mac_swed_capa  &mac_swed_capo  &mac_swed_capaa  &kp PLUS   &kp TILDE    &kp PIPE      &trans        &trans        &trans        &trans        &bootloader
+                                             &trans           &trans     &trans       &trans        &trans        &trans
+            >;
+        };
+
+        Bluetooth_more {
+            bindings = <
+&bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 1    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
